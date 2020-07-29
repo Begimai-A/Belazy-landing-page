@@ -246,7 +246,7 @@
         </div>
     </section>
 
-    </section>
+    
     <section class="questions-answers">
         <div class="container">
             <h3 class="questions-title">
@@ -265,58 +265,58 @@
 
                     </li>
 
-                    <div class="answer" id="popup1">
-                        1.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat voluptates
+                    <p class="answer" id="popup1">
+                        1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat voluptates
                         quis,
                         voluptatum a doloremque ex sunt molestias dolorem nemo nostrum non, quae excepturi est
                         perferendis? Facere in temporibus aliquam.
 
-                    </div>
+                    </p>
 
                     <li class="questions__link2" rel="popup2">
                         Что делать если запчасть не понадобилась?
                     </li>
-                    <div class="answer" id="popup2">
+                    <p class="answer" id="popup2">
                         2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat voluptates
                         quis,
                         voluptatum a doloremque ex sunt molestias dolorem nemo nostrum non, quae excepturi est
                         perferendis? Facere in temporibus aliquam.
 
-                    </div>
+                    </p>
 
 
                     <li class="questions__link3" rel="popup3">
                         Можете ли вы установить деталь?
                     </li>
-                    <div class="answer" id="popup3">
-                        3.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat voluptates
+                    <p class="answer" id="popup3">
+                        3. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat voluptates
                         quis,
                         voluptatum a doloremque ex sunt molestias dolorem nemo nostrum non, quae excepturi est
                         perferendis? Facere in temporibus aliquam.
 
-                    </div>
+                    </p>
 
                     <li class="questions__link4" rel="popup4">
                         В чем преимущество оригинальных деталей?
                     </li>
-                    <div class="answer" id="popup4">
-                        4.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat voluptates
+                    <p class="answer" id="popup4">
+                        4. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat voluptates
                         quis,
                         voluptatum a doloremque ex sunt molestias dolorem nemo nostrum non, quae excepturi est
                         perferendis? Facere in temporibus aliquam.
 
-                    </div>
+                    </p>
                     <li class="questions__link5" rel="popup5">
                         В чем преимущество оригинальных деталей?
 
                     </li>
-                    <div class="answer" id="popup5">
+                    <p class="answer" id="popup5">
                         5. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat voluptates
                         quis,
                         voluptatum a doloremque ex sunt molestias dolorem nemo nostrum non, quae excepturi est
                         perferendis? Facere in temporibus aliquam.
 
-                    </div>
+                    </p>
 
                 </ol>
                 <svg class="synchronization-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -464,8 +464,56 @@
 
     </section>
 
+    <div id="map"></div>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Uluru
+            var uluru = {
+                lat: 64.5444927,
+                lng: 40.5132968
+            };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 16,
+                    center: uluru
+                });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <!--Load the API from the specified URL
+                * The async attribute allows the browser to render the page while the API loads
+                * The key parameter will contain your own API key (which is not needed for this tutorial)
+                * The callback parameter executes the initMap() function
+                -->
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2KkLS-8KOUitb4EAxwyTrRdqnTIcfJ_U&callback=initMap">
+    </script>
+
+    <section class="page-footer">
+        <div class="container">
+            <img class="footer-logo" src="img/лого.png" alt="page-logo">
+            <p class="footer-text">
+                &copy;2016, СДЕЛАНО С <span>&#10084;</span> КОМАНДОЙ
+            </p>
+            <p class="footer-phone">
+                Есть вопросы? Звоните! <br> <span>+7(818) 247-47-25</span>
+            </p>
+
+        </div>
+
+    </section>
+
+
+
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
