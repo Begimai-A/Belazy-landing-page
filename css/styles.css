@@ -999,15 +999,20 @@ html {
 
 .footer-img {
     padding-top: 38px;
-    
+
 }
 
-.footer-phone span {
+.call-now--footer {
     font-size: 18px;
     color: #ffffff;
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
     text-align: right;
+    text-decoration: none;
+}
+
+.call-now--footer:hover {
+    color: #0b3554;
 }
 
 .footer-text span {
